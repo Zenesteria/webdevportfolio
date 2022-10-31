@@ -23,10 +23,10 @@ export default function FeaturedProject({img, title, date, category, description
 
         </div>
         <div className="flex flex-col flex-1 min-w-[300px] px-4">
-            <h1 style={{fontSize:'calc(1.2rem + 0.5vw)'}}>
+            <h1 className='mt-4' style={{fontSize:'calc(1.2rem + 0.5vw)'}}>
                 Project Name: <span className='font-bold'>{title}</span>
             </h1>
-            <h1 style={{fontSize:'calc(1.2rem + 0.5vw)'}}>
+            <h1 className='mb-3' style={{fontSize:'calc(1.2rem + 0.5vw)'}}>
                 Created: <span className='font-bold'>{date}</span>
             </h1>
             <div className="flex flex-wrap p-2">

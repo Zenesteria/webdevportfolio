@@ -33,9 +33,9 @@ const Projects:NextPage<PageProps> = ({projects, projectCategories}:PageProps) =
         />
 
         <Tabs my={'10'} variant='enclosed'>
-            <TabList>
+            <TabList overflowX={'auto'} overflowY='hidden' minW='300px'>
                 {projectCategories.map((category) => {
-                    return <Tab key={category.id}>{category.name}</Tab>
+                    return <Tab key={category.id} minW='130px'>{category.name}</Tab>
                 })}
             </TabList>
 
