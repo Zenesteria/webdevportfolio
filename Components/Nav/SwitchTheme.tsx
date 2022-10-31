@@ -11,7 +11,7 @@ export default function SwitchTheme() {
     const [dark, setDark] = useState(false)
     const handleClick = () => {
         // HANDLES CLICK EVENT
-        toggleColorMode()
+        // toggleColorMode()
         if(theme == 'dark'){
           setDark(false)
           setTheme('light')
