@@ -1,7 +1,7 @@
-export interface gqlModels{
+export type gqlModels={
     pageContents:{
         id:string
-        name:string
+        name:'blogcaption' | 'mainpageheading' | 'newsletter'
         title:string
         subtitle:string
         content:{
@@ -9,8 +9,78 @@ export interface gqlModels{
         }
         images:{
           url:string
-        }
+        }[]
         link:string
         buttonText:string
+    }[],
+
+    posts:{
+      id:string
+      title:string
+      excerpt:string
+      slug:string
+      publishedAt:string
+      featured:boolean
+      content:{
+          html:string
+      }
+      author:{
+          id:string
+          name:string
+          photo:{
+            url:string
+          }
+      }
+      categories:{
+          id:string
+          name:string
+      }
+    }[],
+
+    post:{
+      id:string
+      title:string
+      excerpt:string
+      slug:string
+      publishedAt:string
+      featured:boolean
+      content:{
+          html:string
+      }
+      author:{
+          id:string
+          name:string
+          photo:{
+            url:string
+          }
+      }
+      categories:{
+          id:string
+          name:string
+      }
+    },
+    
+    projects:{
+      id:string
+      name:string
+      previewlink:string
+      githublink:string
+      projectImages:{
+          url:string
+      }[]
+      projectstatus:string
+      startdate:string
+      featured:boolean
+      description:string
+      projectCategory:{
+          id:string
+          name:string
+      }
+      active:boolean
+    }[],
+
+    projectCategories:{
+      id:string
+      name:string
     }[]
 }

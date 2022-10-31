@@ -2,6 +2,11 @@
 @tailwind utilities;
 @tailwind components;
 
+/* @font-face {
+  font-family: 'raleway';
+  src: url('../public/fonts/Raleway-VariableFont_wght.ttf');
+} */
+
 html,
 body {
   padding: 0;
@@ -17,7 +22,55 @@ a {
 
 * {
   box-sizing: border-box;
+  transition: .3s;
 }
+
+.content p{
+  margin: 1rem 0;
+}
+
+.content ol{
+  list-style:decimal;
+  margin: 1rem;
+}
+
+.content ul{
+  list-style: disc;
+  margin: 1rem;
+}
+
+.content li{
+  margin: 0.5rem 0;
+}
+
+.content a{
+  text-decoration: underline;
+}
+
+
+
+.content h1{
+  font-size: calc(1.5rem + 0.5vw);
+  font-weight: bold;
+}
+.content h2,h3{
+  font-size: calc(1rem + 0.5vw);
+  font-weight: bold;
+  margin: 3rem 0 0.5rem 0;
+}
+
+
+
+.conic-gradient-border-one{
+  border-image: conic-gradient(#00f9ff, #47a4ff, #8f93ff) 1;
+}
+
+.textShadowOne{
+  text-shadow:'0 0 10px cyan';
+}
+
+
+
 
 
 
