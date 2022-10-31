@@ -21,7 +21,7 @@ export default function Hero({title, subtitle, content, img}:ComProps) {
                 {parser(content)}
             </div>
         </div>
-        <div className='flex-[0.4] min-w-[250px] mx-auto aspect-square rounded-full bg-center bg-cover my-5' style={{backgroundImage:`url(${img})`}}></div>
+        <div className='flex-[0.4] min-w-[250px] mx-auto aspect-square rounded-full bg-center bg-no-repeat bg-cover my-5' style={{backgroundImage:`url(${img})`}}></div>
     </div>
   )
 }
