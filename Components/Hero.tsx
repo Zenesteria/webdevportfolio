@@ -9,9 +9,9 @@ interface ComProps{
 
 export default function Hero({title, subtitle, content, img}:ComProps) {
   return (
-    <div className='flex justify-between flex-wrap p-4 items-center w-full min-w-[330px]'>
+    <div className='flex justify-between flex-wrap p-4 items-center w-full min-w-[330px] dark:text-cyan-400 text-black'>
         <div className="flex-1 max-w-[500px] flex flex-col">
-            <h1 className='font-black' style={{fontSize:'calc(1rem + 1.5vw)'}}>
+            <h1 className='font-black ' style={{fontSize:'calc(1rem + 1.5vw)'}}>
                 {title}
             </h1>
             <h3 className='mb-2 font-light dark:font-extralight dark:text-white' style={{fontSize:'calc(0.6rem + 0.25vw)'}}>
