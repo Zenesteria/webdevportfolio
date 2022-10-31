@@ -21,13 +21,7 @@ const Post:NextPage<PageProps> = ({post}:PageProps) => {
             {post.title}
         </h1>
         <div className="flex w-full items-center">
-            <Image
-                src={post.author.photo.url}
-                alt={post.author.name}
-                width={30}
-                height={30}
-                className='rounded-full mr-2'
-            />
+            <div className="bg-cover bg-center bg-no-repeat w-[30px] aspect-square rounded-full mr-3" style={{backgroundImage:`url('${post.author.photo.url}')`}}></div>
             <p>
                 {post.author.name} / {format(date, 'MMMM Do, YYYY')}
             </p>
