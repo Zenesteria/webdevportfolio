@@ -6,9 +6,17 @@ import {Input, Button} from '@chakra-ui/react'
 export default function NewsLetter() {
     const [email, setEmail] = useState('')
 
-    const handleClick = () => {
+    const handleClick = async() => {
         // Handle Email sub
-
+        const subscribe = await fetch('/api/subscribe', {
+            method:'POST',
+            headers:{
+                'Content-type':'application/json'
+            },
+            body:JSON.stringify({
+                email
+            })
+        })
     }
   return (
     <div className='flex flex-col justify-center w-[80%] min-w-[330px] mx-auto h-fit min-h-[30vh] my-20 p-4 rounded-xl dark:bg-[#101629] dark:border-none border border-[#101629] dark:text-white text-black'>
