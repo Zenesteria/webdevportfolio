@@ -207,6 +207,7 @@ The following are technologies I found to be useful while creating the afforment
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
+* [wweb.dev](https://wweb.dev/resources/animated-css-background-generator/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
