@@ -1,27 +1,111 @@
-import parser from 'html-react-parser'
+import parser from "html-react-parser";
 
-interface ComProps{
-    title:string,
-    subtitle:string,
-    content:string,
-    img:string
+interface ComProps {
+  title: string;
+  subtitle: string;
+  content: string;
+  img: string;
 }
 
-export default function Hero({title, subtitle, content, img}:ComProps) {
+export default function Hero({ title, subtitle, content, img }: ComProps) {
   return (
-    <div className='flex justify-between flex-wrap p-4 items-center w-full min-w-[330px] dark:text-cyan-400 text-black'>
-        <div className="flex-1 max-w-[500px] flex flex-col">
-            <h1 className='font-black ' style={{fontSize:'calc(1rem + 1.5vw)'}}>
-                {title}
+    <div className="">
+      <h1
+        className="text-center font-[cinzel] tracking-wider uppercase leading-[4rem]"
+        style={{ fontSize: "calc(1.5rem + 1vw)" }}
+      >
+        DIGITAL SOLUTIONS EXPERT <br />
+        Abdurrahman Adebisi Aderinto <br />
+        Bred in Nigeria
+      </h1>
+      <div className="flex justify-between flex-wrap p-4 items-center w-full min-w-[330px] dark:text-orange-400 text-black">
+        <div className="flex-[0.8] h-[55vh] max-w-[500px] flex flex-col justify-between">
+          <div className="">
+            <h1
+              className="mb-2 text-slate-400 uppercase tracking-wider"
+              style={{ fontSize: "calc(0.4rem + 0.5vw)" }}
+            >
+              Biography
             </h1>
-            <h3 className='mb-2 font-light dark:font-extralight dark:text-white' style={{fontSize:'calc(0.6rem + 0.25vw)'}}>
-                <em>{subtitle}</em>
-            </h3>
-            <div className='dark:text-white'>
-                {parser(content)}
-            </div>
+            <div>{parser(content)}</div>
+          </div>
+
+          <br />
+
+          <div className="">
+            <h1
+              className="mb-2 text-slate-400 uppercase tracking-wider"
+              style={{ fontSize: "calc(0.4rem + 0.5vw)" }}
+            >
+              Contact
+            </h1>
+            <p>Abuja, Nigeria</p>
+            <p>abdurrahman.aderinto@gmail.com</p>
+            <p>+234 9061 443 128</p>
+          </div>
+          <br />
+
+          <div className="">
+            <h1
+              className="mb-2 text-slate-400 uppercase tracking-wider"
+              style={{ fontSize: "calc(0.4rem + 0.5vw)" }}
+            >
+              Services
+            </h1>
+            <p>Web Development</p>
+          </div>
         </div>
-        <div className='flex-[0.4] min-w-[250px] mx-auto aspect-square rounded-full bg-center bg-no-repeat bg-cover my-5' style={{backgroundImage:`url(${img})`}}></div>
+
+        <div className="flex-1 min-w-[250px] mx-10 h-[85vh] rounded-full my-5 p-5 border-[0.5px] border-slate-500 border-dashed">
+          <div
+            className="w-full min-w-[250px] mx-auto h-full rounded-full bg-[-40px] bg-no-repeat bg-cover"
+            style={{ backgroundImage: `url(${img})` }}
+          ></div>
+        </div>
+        <div className="flex-[0.8] text-right h-[55vh] max-w-[500px] flex flex-col justify-between">
+          <div className="">
+            <h1
+              className="mb-2 text-slate-400 uppercase tracking-wider"
+              style={{ fontSize: "calc(0.4rem + 0.5vw)" }}
+            >
+              Years of Experience
+            </h1>
+            <h1
+              className="font-bold my-2"
+              style={{ fontSize: "calc(1rem + 1vw)" }}
+            >
+              3
+            </h1>
+          </div>
+
+          <br />
+
+          <div className="">
+            <h1
+              className="mb-2 text-slate-400 uppercase tracking-wider"
+              style={{ fontSize: "calc(0.4rem + 0.5vw)" }}
+            >
+              Clients
+            </h1>
+            <h1 className="font-bold" style={{ fontSize: "calc(1rem + 1vw)" }}>
+              <span className="mx-1" style={{fontSize:'calc(0.5rem + 1vw)'}}>+</span>40
+            </h1>
+          </div>
+          <br />
+
+          <div className="">
+            <h1
+              className="mb-2 text-slate-400 uppercase tracking-wider"
+              style={{ fontSize: "calc(0.4rem + 0.5vw)" }}
+            >
+              Projects Concluded
+            </h1>
+            <h1 className="font-bold" style={{ fontSize: "calc(1rem + 1vw)" }}>
+              132
+            </h1>
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }

@@ -1,19 +1,18 @@
-import React from 'react'
-import Bg from '../animated-bg/Bg'
-import {Nav,Footer} from '../index'
+import React from "react";
+import Bg from "../animated-bg/Bg";
+import { Nav, Footer } from "../index";
 
-const Layout = ({children}:{children:React.ReactElement}) => {
-  return(
-    <div className="flex relative w-full min-h-screen bg-white dark:bg-[#00002B] dark:text-cyan-400 text-black font-['raleway']">
-      <Bg/>
-      <div className='w-[70%] min-w-[330px] mx-auto z-[20]'>
-        <Nav/>
-          {children}
-        <Footer/>
+const Layout = ({ children }: { children: React.ReactElement }) => {
+  return (
+    <div className="flex relative w-full min-h-screen bg-orange-50 dark:bg-[#2b0e00] dark:text-orange-400 text-black font-['cinzel_reg']">
+      <Bg />
+      <div className="w-[80%] min-w-[330px] mx-auto z-[20]">
+        <Nav />
+        {children}
+        <Footer />
       </div>
     </div>
-  )
-}
+  );
+};
 
-
-export default Layout
+export default Layout;

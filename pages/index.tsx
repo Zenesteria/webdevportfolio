@@ -22,7 +22,7 @@ const Home: NextPage<PageProps> = ({pageContents,posts,projects}:PageProps) => {
         <meta name="description" content="Abdurrahman Adebisi Aderinto's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      
       <Hero
         title={heroData.title}
         subtitle={heroData.subtitle}
