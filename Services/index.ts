@@ -51,6 +51,9 @@ export const getPosts = async () => {
                     id
                     name
                 }
+                thumbnail{
+                    url
+                }
             }
         }
     `
@@ -63,6 +66,9 @@ export const getPost = async (slug:string) => {
             post(where:{slug:$slug}) {
                 id
                 title
+                thumbnail{
+                    url
+                }
                 excerpt
                 slug
                 publishedAt

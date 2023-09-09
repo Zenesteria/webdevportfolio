@@ -17,6 +17,9 @@ export type gqlModels={
     posts:{
       id:string
       title:string
+      thumbnail?:{
+        url:string
+      }
       excerpt:string
       slug:string
       publishedAt:string
@@ -40,6 +43,9 @@ export type gqlModels={
     post:{
       id:string
       title:string
+      thumbnail:{
+        url:string
+      }
       excerpt:string
       slug:string
       publishedAt:string

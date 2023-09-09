@@ -43,7 +43,7 @@ const Projects:NextPage<PageProps> = ({projects, projectCategories}:PageProps) =
                 {
                     projectCategories.map((category) => {
                         return(
-                            <TabPanel key={category.id}>
+                            <TabPanel className="flex flex-wrap" key={category.id}>
                                 {
                                     projects.filter(project => {return project.projectCategory.name == category.name}).map((projectItem) => {
                                         return(

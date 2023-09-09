@@ -5,8 +5,16 @@ import {ThemeProvider} from 'next-themes'
 
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from '../config/theme'
+import aos from 'aos'
+import 'aos/dist/aos.css'
+import {useEffect} from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    aos.init({
+      duration:1200
+    })
+  },[])
   return(
     <ChakraProvider theme={theme}>
         <ThemeProvider attribute='class'>

@@ -19,56 +19,48 @@ const Home: NextPage<PageProps> = ({pageContents,posts,projects}:PageProps) => {
     <div>
       <Head>
         <title>Abdurrahman Aderinto - Fullstack Developer</title>
-        <meta name="description" content="Abdurrahman Adebisi Aderinto's Portfolio" />
+        <meta
+          name="description"
+          content="Abdurrahman Adebisi Aderinto's Portfolio"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      <Hero
-        title={heroData.title}
-        subtitle={heroData.subtitle}
-        content={heroData.content.html}
-        img={heroData.images[0].url}
-      />
-
-      <TitleTxt size='calc(1.2rem + 1vw)'>
-          Featured Posts
-      </TitleTxt>
-
-      <div className="flex flex-wrap w-full h-fit my-5">
-          {
-            featuredPostsData.map((post) => {
-                return(
-                  <FeaturedPost
-                    txt={post.excerpt}
-                    key={post.id}
-                    link={post.slug}
-                    linkText={post.title}
-                  />
-                )
-            })
-          }
+      <div className="" data-aos='fade-right' data-aos-delay='300'>
+        <Hero
+          title={heroData.title}
+          subtitle={heroData.subtitle}
+          content={heroData.content.html}
+          img={heroData.images[0].url}
+        />
       </div>
-
-          <br /> <br />
-
-      <TitleTxt size='calc(1.2rem + 1vw)'>
-          Current Project
-      </TitleTxt>
-
+      <TitleTxt size="calc(1.2rem + 1vw)">Featured Posts</TitleTxt>
+      <div className="flex flex-wrap w-full h-fit my-5">
+        {featuredPostsData.map((post) => {
+          return (
+            <FeaturedPost
+              txt={post.excerpt}
+              key={post.id}
+              link={post.slug}
+              linkText={post.title}
+            />
+          );
+        })}
+      </div>
+      <br /> <br />
+      <TitleTxt size="calc(1.2rem + 1vw)">Current Project</TitleTxt>
       <FeaturedProject
-          img={featuredProjectData.projectImages[0].url}
-          title={featuredProjectData.name}
-          date={featuredProjectData.startdate}
-          category={featuredProjectData.projectCategory}
-          description={featuredProjectData.description}
-          githubLink={featuredProjectData.githublink}
-          previewLink={featuredProjectData.previewlink}
-          featured={true}
+        img={featuredProjectData.projectImages[0].url}
+        title={featuredProjectData.name}
+        date={featuredProjectData.startdate}
+        category={featuredProjectData.projectCategory}
+        description={featuredProjectData.description}
+        githubLink={featuredProjectData.githublink}
+        previewLink={featuredProjectData.previewlink}
+        featured={true}
       />
-
-      <NewsLetter/>
+      <NewsLetter />
     </div>
-  )
+  );
 }
 
 

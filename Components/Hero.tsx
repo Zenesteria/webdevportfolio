@@ -9,7 +9,7 @@ interface ComProps {
 
 export default function Hero({ title, subtitle, content, img }: ComProps) {
   return (
-    <div className="">
+    <div className="" id="cont">
       <h1
         className="text-center font-[cinzel] tracking-wider uppercase leading-[4rem]"
         style={{ fontSize: "calc(1.5rem + 1vw)" }}
@@ -59,12 +59,15 @@ export default function Hero({ title, subtitle, content, img }: ComProps) {
         <div className="flex-1 min-w-[250px] mx-10 h-[85vh] rounded-full my-5 p-5 border-[0.5px] border-slate-500 border-dashed">
           <div
             className="w-full min-w-[250px] mx-auto h-full rounded-full bg-[-40px] bg-no-repeat bg-cover"
+
             style={{ backgroundImage: `url(${img})` }}
           ></div>
         </div>
         <div className="flex-[0.8] text-right h-[55vh] max-w-[500px] flex flex-col justify-between">
           <div className="">
             <h1
+              data-aos='fade-right'
+            data-aos-delay='300'
               className="mb-2 text-slate-400 uppercase tracking-wider"
               style={{ fontSize: "calc(0.4rem + 0.5vw)" }}
             >

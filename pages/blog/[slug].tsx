@@ -17,6 +17,7 @@ const Post:NextPage<PageProps> = ({post}:PageProps) => {
     const date = new Date(post.publishedAt)
   return (
     <div className="p-4 w-[80%] min-w-[300px] mx-auto dark:text-white text-black">
+        <div className="w-full aspect-video mb-3 bg-contain bg-center bg-no-repeat" style={{backgroundImage:`url('${post.thumbnail.url}')`}}></div>
         <h1 className="font-bold min-w-[250px]" style={{fontSize:'calc(1.5rem + 1vw)'}}>
             {post.title}
         </h1>
@@ -39,7 +40,6 @@ export const getStaticProps:GetStaticProps = async ({params}) => {
     const slug:any = params?.slug
 
     const post = await getPost(slug);
-
     return{
         props:{
             post

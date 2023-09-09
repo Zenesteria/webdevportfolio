@@ -7,7 +7,7 @@ import parser from "html-react-parser";
 import { Input } from "@chakra-ui/react";
 
 import Pagination from "../../utils/pagination";
-import { Post } from "../../Components/posts";
+import { FeaturedPost, Post } from "../../Components/posts";
 
 interface PageProps {
   pageContents: gqlModels["pageContents"];
@@ -36,6 +36,7 @@ const Blog: NextPage<PageProps> = ({ pageContents, posts }: PageProps) => {
   const blogPageContent = pageContents.filter(
     (content) => content.name == "blogcaption"
   )[0];
+  const recentPosts = posts.slice(0,3)
   return (
     <div className="flex flex-col items-center text-center">
       <h1 className="font-bold" style={{ fontSize: "calc(2rem + 1vw)" }}>
@@ -44,16 +45,37 @@ const Blog: NextPage<PageProps> = ({ pageContents, posts }: PageProps) => {
       <div className="max-w-[600px] text-[0.9rem] dark:text-white text-black italic">
         {parser(blogPageContent.content.html)}
       </div>
-      <Input
-        w={"60%"}
-        _hover={{}}
-        border="2px solid rgb(154 52 18) !important"
-        className="p-5 my-5 rounded-xl bg-transparent border dark:border-orange-400 dark:placeholder:text-orange-400 placeholder:text-black outline-none"
-        placeholder="Search Articles. . ."
-        onChange={(e) => setSearchValue(e.target.value)}
-      />
       <>
         <div className="flex flex-col my-10 w-full text-left min-h-screen">
+          <h1
+            className="dark:text-white font-bold"
+            style={{ fontSize: "calc(1rem + 1vw)" }}
+          >
+            Recent Posts
+          </h1>
+          <div className="flex flex-wrap w-full h-fit my-7">
+            {recentPosts.map((post) => {
+              return (
+                <FeaturedPost
+                  txt={post.excerpt}
+                  key={post.id}
+                  link={`/blog/${post.slug}`}
+                  linkText={post.title}
+                />
+              );
+            })}
+          </div>
+
+          <Input
+            w={"60%"}
+            _hover={{}}
+            border="2px solid rgb(154 52 18) !important"
+            className="p-5 my-5 rounded-xl bg-transparent border dark:border-orange-400 dark:placeholder:text-orange-400 placeholder:text-black outline-none"
+            placeholder="Search Articles. . ."
+            mx={'auto'}
+            my={'10'}
+            onChange={(e) => setSearchValue(e.target.value)}
+          />
           <h1
             className="dark:text-white font-bold"
             style={{ fontSize: "calc(1rem + 1vw)" }}
