@@ -38,17 +38,19 @@ export default function Project({
         </h1>
       </Link>
 
-      <p className="text-[0.85rem] text-orange-900 dark:text-white">{description}</p>
+      <p className="text-[0.85rem] text-orange-900 dark:text-white">
+        {description}
+      </p>
 
       <div className="flex w-full justify-between">
         <Link
-          className="my-4 font-semibold text-[0.8rem] hover:underline hover:tracking-wider w-fit"
+          className="my-4 font-semibold text-[0.8rem] dark:text-orange-200 hover:underline hover:tracking-wider w-fit"
           href={githubLink}
         >
           Github
         </Link>
         <Link
-          className="my-4 font-semibold text-[0.8rem] hover:underline hover:tracking-wider w-fit"
+          className="my-4 font-semibold dark:text-orange-200 text-[0.8rem] hover:underline hover:tracking-wider w-fit"
           href={previewLink}
         >
           Preview

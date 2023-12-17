@@ -27,11 +27,16 @@ export default function FeaturedProject({
 }: compProps) {
   const { theme } = useTheme();
   return (
-    <div className="flex flex-wrap w-full h-fit my-5">
-      <div
-        className="flex flex-1 min-w-[330px] min-h-[300px] max-w-[500px] bg-center bg-cover bg-no-repeat mr-3 rounded-xl"
-        style={{ backgroundImage: `url('${img}')` }}
-      ></div>
+    <div className="flex flex-wrap w-full h-fit my-5 hover:bg-orange-100 dark:hover:bg-[rgba(62,37,13,0.25)] duration-300 p-3 rounded-xl">
+      <Link
+        className="flex-1 mr-3 bg-red-400 rounded-xl overflow-hidden"
+        href={`/projects/${title}`}
+      >
+        <div
+          className="mx-0 h-full aspect-video w-full bg-center bg-contain bg-no-repeat"
+          style={{ backgroundImage: `url('${img}')` }}
+        ></div>
+      </Link>
       <div className="flex flex-col flex-1 min-w-[300px] px-4">
         <h1 className="mt-4" style={{ fontSize: "calc(1.2rem + 0.5vw)" }}>
           Project Name: <span className="font-bold">{title}</span>
