@@ -14,7 +14,7 @@ export default function Hero({ title, subtitle, content, img }: ComProps) {
         className="text-center font-[cinzel] tracking-wider uppercase leading-[4rem]"
         style={{ fontSize: "calc(1.5rem + 1vw)" }}
       >
-        DIGITAL SOLUTIONS EXPERT <br />
+        FULL STACK DEVELOPER <br />
         Abdurrahman Adebisi Aderinto <br />
         Bred in Nigeria
       </h1>
