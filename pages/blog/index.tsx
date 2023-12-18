@@ -59,7 +59,7 @@ const Blog: NextPage<PageProps> = ({ pageContents, posts }: PageProps) => {
                 <FeaturedPost
                   txt={post.excerpt}
                   key={post.id}
-                  link={`/blog/${post.slug}`}
+                  link={`${post.slug}`}
                   linkText={post.title}
                 />
               );
