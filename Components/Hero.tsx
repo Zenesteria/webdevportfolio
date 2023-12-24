@@ -56,13 +56,16 @@ export default function Hero({ title, subtitle, content, img }: ComProps) {
           </div>
         </div>
 
-        <div className="flex-1 min-w-[250px] mx-10 h-[85vh] rounded-full my-5 p-5 border-[0.5px] border-slate-500 border-dashed">
+        {/* Profile Image */}
+        <div className="flex-1 min-w-[250px] mx-10 aspect-square rounded-full my-5 overflow-hidden animate-blobslower shadow-orange-200 shadow-xl dark:shadow-white border-[0.5px] dark:border-white bg-transparent border-dashed">
           <div
-            className="w-full min-w-[250px] mx-auto h-full rounded-full bg-[-40px] bg-no-repeat bg-cover"
+            className="w-full min-w-[250px] mx-auto h-full animate-blobslower rounded-full bg-[-40px] bg-no-repeat bg-cover"
 
             style={{ backgroundImage: `url(${img})` }}
           ></div>
         </div>
+
+
         <div className="flex-[0.8] text-right h-[55vh] max-w-[500px] flex flex-col justify-between">
           <div className="">
             <h1
