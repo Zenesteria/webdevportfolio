@@ -1,4 +1,6 @@
 import { useState, useMemo } from "react";
+import Pfp from '../../public/img/pfp.png'
+import {NextjsOriginal, PythonOriginal} from 'devicons-react'
 
 import { GetStaticProps, NextPage } from "next";
 import { gqlModels } from "../../interface";
@@ -8,6 +10,7 @@ import { Input } from "@chakra-ui/react";
 
 import Pagination from "../../utils/pagination";
 import { FeaturedPost, Post } from "../../Components/posts";
+import Image from "next/image";
 
 interface PageProps {
   pageContents: gqlModels["pageContents"];
@@ -42,9 +45,15 @@ const Blog: NextPage<PageProps> = ({ pageContents, posts }: PageProps) => {
       <h1 className="font-bold" style={{ fontSize: "calc(2rem + 1vw)" }}>
         Blog
       </h1>
+      <div className="my-4 flex justify-center w-[70%] mx-auto min-w-[300px] items-center">
+        <NextjsOriginal className="dark:bg-white shadow-md shadow-black/50 dark:shadow-white rounded-full" color="" size={80} />
+        <Image className="mx-5" src={Pfp} width={100} alt="abdurrahman aderinto" />
+        <PythonOriginal className=" drop-shadow-lg" size={80} />
+      </div>
       <div className="max-w-[600px] text-[0.9rem] dark:text-white text-black italic">
         {parser(blogPageContent.content.html)}
       </div>
+
       <>
         <div className="flex flex-col my-10 w-full text-left min-h-screen">
           <h1
@@ -72,8 +81,8 @@ const Blog: NextPage<PageProps> = ({ pageContents, posts }: PageProps) => {
             border="2px solid rgb(154 52 18) !important"
             className="p-5 my-5 rounded-xl bg-transparent border dark:border-orange-400 dark:placeholder:text-orange-400 placeholder:text-black outline-none"
             placeholder="Search Articles. . ."
-            mx={'auto'}
-            my={'10'}
+            mx={"auto"}
+            my={"10"}
             onChange={(e) => setSearchValue(e.target.value)}
           />
           <h1

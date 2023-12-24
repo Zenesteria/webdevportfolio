@@ -53,7 +53,7 @@ export default function FeaturedProject({
           </p>
         </div>
         <p className="my-4 dark:text-white">
-          <span className="font-bold dark:text-orange-400">Description:</span>{" "}
+          <span className="font-bold dark:text-white">Description:</span>{" "}
           {description}
         </p>
         <div className="flex w-full justify-between">

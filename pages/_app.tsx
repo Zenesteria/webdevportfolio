@@ -12,7 +12,7 @@ import {useEffect} from 'react'
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     aos.init({
-      duration:1200
+      duration:400
     })
   },[])
   return(

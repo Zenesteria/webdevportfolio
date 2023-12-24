@@ -44,13 +44,13 @@ export default function Project({
 
       <div className="flex w-full justify-between">
         <Link
-          className="my-4 font-semibold text-[0.8rem] dark:text-orange-200 hover:underline hover:tracking-wider w-fit"
+          className="my-4 font-semibold text-[0.8rem] dark:text-white hover:underline hover:tracking-wider w-fit"
           href={githubLink}
         >
           Github
         </Link>
         <Link
-          className="my-4 font-semibold dark:text-orange-200 text-[0.8rem] hover:underline hover:tracking-wider w-fit"
+          className="my-4 font-semibold dark:text-white text-[0.8rem] hover:underline hover:tracking-wider w-fit"
           href={previewLink}
         >
           Preview

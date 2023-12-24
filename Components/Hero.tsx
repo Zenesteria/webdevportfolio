@@ -13,12 +13,14 @@ export default function Hero({ title, subtitle, content, img }: ComProps) {
       <h1
         className="text-center font-[cinzel] tracking-wider uppercase leading-[4rem]"
         style={{ fontSize: "calc(1.5rem + 1vw)" }}
+        data-aos='fade-down'
+        data-aos-delay='50'
       >
         FULL STACK DEVELOPER <br />
         Abdurrahman Adebisi Aderinto <br />
         Bred in Nigeria
       </h1>
-      <div className="flex justify-between flex-wrap p-4 items-center w-full min-w-[330px] dark:text-orange-400 text-black">
+      <div className="flex justify-between flex-wrap p-4 items-center w-full min-w-[330px] dark:text-white text-black">
         <div className="flex-[0.8] h-[55vh] max-w-[500px] flex flex-col justify-between">
           <div className="">
             <h1
@@ -80,7 +82,7 @@ export default function Hero({ title, subtitle, content, img }: ComProps) {
               className="font-bold my-2"
               style={{ fontSize: "calc(1rem + 1vw)" }}
             >
-              3
+              2
             </h1>
           </div>
 
@@ -94,7 +96,7 @@ export default function Hero({ title, subtitle, content, img }: ComProps) {
               Clients
             </h1>
             <h1 className="font-bold" style={{ fontSize: "calc(1rem + 1vw)" }}>
-              <span className="mx-1" style={{fontSize:'calc(0.5rem + 1vw)'}}>+</span>40
+              <span className="mx-1" style={{fontSize:'calc(0.5rem + 1vw)'}}>+</span>10
             </h1>
           </div>
           <br />
@@ -107,7 +109,7 @@ export default function Hero({ title, subtitle, content, img }: ComProps) {
               Projects Concluded
             </h1>
             <h1 className="font-bold" style={{ fontSize: "calc(1rem + 1vw)" }}>
-              132
+              12
             </h1>
           </div>
         </div>
