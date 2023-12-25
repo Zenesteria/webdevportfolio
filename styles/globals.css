@@ -33,6 +33,10 @@ a {
   margin: 1rem 0;
 }
 
+.content p, li{
+  font-size:calc(1rem + 0.5vw);
+}
+
 .content ol {
   list-style: decimal;
   margin: 1rem;

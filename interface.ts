@@ -63,7 +63,7 @@ export type gqlModels={
       categories:{
           id:string
           name:string
-      }
+      }[]
     },
     
     projects:{
