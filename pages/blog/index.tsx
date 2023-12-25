@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import Pfp from '../../public/img/pfp.png'
 import {NextjsOriginal, PythonOriginal} from 'devicons-react'
+import Head from "next/head";
 
 import { GetStaticProps, NextPage } from "next";
 import { gqlModels } from "../../interface";
@@ -42,12 +43,29 @@ const Blog: NextPage<PageProps> = ({ pageContents, posts }: PageProps) => {
   const recentPosts = posts.slice(0,3)
   return (
     <div className="flex flex-col items-center text-center">
+      <Head>
+        <title>{`Abdurrahman Aderinto's Blog`}</title>
+        <meta
+          name="description"
+          content="Abdurrahman Adebisi Aderinto's Blog - Crafting the Future with Code and Creativity"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <h1 className="font-bold" style={{ fontSize: "calc(2rem + 1vw)" }}>
         Blog
       </h1>
       <div className="my-4 flex justify-center w-[70%] mx-auto min-w-[300px] items-center">
-        <NextjsOriginal className="dark:bg-white shadow-md shadow-black/50 dark:shadow-white rounded-full" color="" size={80} />
-        <Image className="mx-5" src={Pfp} width={100} alt="abdurrahman aderinto" />
+        <NextjsOriginal
+          className="dark:bg-white shadow-md shadow-black/50 dark:shadow-white rounded-full"
+          color=""
+          size={80}
+        />
+        <Image
+          className="mx-5"
+          src={Pfp}
+          width={100}
+          alt="abdurrahman aderinto"
+        />
         <PythonOriginal className=" drop-shadow-lg" size={80} />
       </div>
       <div className="max-w-[600px] text-[0.9rem] dark:text-white text-black italic">

@@ -30,7 +30,7 @@ export default function FeaturedProject({
     <div className="flex flex-wrap w-full h-fit my-5 hover:bg-orange-100 dark:hover:bg-[rgba(62,37,13,0.25)] duration-300 p-3 rounded-xl">
       <Link
         className="flex-1 mr-3 bg-red-400 rounded-xl overflow-hidden"
-        href={`/projects/${title}`}
+        href={`${previewLink}`}
       >
         <div
           className="mx-0 h-full aspect-video w-full bg-center bg-contain bg-no-repeat"
