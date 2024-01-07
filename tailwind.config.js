@@ -66,7 +66,7 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        blob: {
+        "blob": {
           "0%, 100%": {
             "border-radius": "60% 40% 30% 70% / 60% 30% 70% 40%",
           },
@@ -83,5 +83,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
